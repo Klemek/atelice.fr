@@ -1,0 +1,108 @@
+:root {
+    --main-color: #8BC34A;
+}
+
+/*=======================================
+Template Design By MarkUps.
+Author URI : http://www.markups.io/
+========================================*/
+
+.scrollToTop {
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.mu-readmore-btn,
+.mu-browsmore-btn,
+.mu-main-navbar .mu-main-nav li a:hover,
+.mu-main-navbar .mu-main-nav li a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-small-title,
+.mu-a-propos-area ul li:before,
+.mu-prestation-list li:before,
+.mu-references-list li:before,
+.mu-title .mu-subtitle,
+.mu-presta-item-nav li .media .media-body .media-heading a:hover,
+.mu-presta-item-nav li .media .media-body .media-heading a:focus,
+.mu-presta-item-nav li .media .media-body .mu-menu-price,
+.mu-single-profile-info h4,
+.mu-footer-copyright p a:hover,
+.mu-footer-copyright p a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
+.mu-main-navbar .navbar-header .navbar-brand span,
+.mu-more-references-area a:hover,
+.mu-profile-content a:hover,
+.mu-profile-link,
+.mu-contact-content a:hover {
+    color: var(--main-color) !important;
+}
+
+.mu-readmore-btn::after,
+.mu-testimonial-slider .slick-dots li,
+.mu-profile-nav .slick-dots li,
+.mu-top-slider .slick-dots li button {
+    border: 2px solid var(--main-color);
+}
+
+.mu-readmore-btn:hover,
+.mu-readmore-btn:focus,
+.mu-prestations li a,
+.mu-testimonial-slider .slick-dots .slick-active,
+.mu-single-profile-social a:hover,
+.mu-single-profile-social a:focus,
+.mu-footer-social a:hover,
+.mu-footer-social a:hover,
+.navbar-default .navbar-toggle .icon-bar,
+.mu-profile-nav .slick-dots .slick-active,
+.mu-counter-nav li .mu-single-counter,
+.mu-top-slider .slick-dots li.slick-active button::before {
+    background-color: var(--main-color);
+}
+
+.mu-readmore-btn:hover::after,
+.mu-readmore-btn:focus::after {
+    border-color: var(--main-color);
+}
+
+.mu-browsmore-btn:hover,
+.mu-browsmore-btn:focus,
+.mu-top-slider .slick-prev:hover,
+.mu-top-slider .slick-prev:focus,
+.mu-top-slider .slick-next:hover,
+.mu-top-slider .slick-next:focus {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+
+.mu-prestations li a:hover,
+.mu-prestations li a:focus,
+.mu-prestations li.active a,
+.mu-prestations li.active a:hover,
+.mu-prestations li.active a:focus {
+    color: var(--main-color);
+    border-color: var(--main-color) var(--main-color) transparent;
+}
+
+
+.mu-contact-right .mu-contact-widget h3 {
+    border-bottom: 2px solid var(--main-color);
+}
+
+
+.mu-single-profile .mu-single-profile-social a {
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.github-fork-ribbon:before{
+    background-color: var(--main-color);
+}
+
+/*=======================================
+Template Design By MarkUps.
+Author URI : http://www.markups.io/
+========================================*/
