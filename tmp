@@ -1,4 +1,4 @@
-bandit.labs.overthewire.org
+bandit.labs.overthewire.org 2220
 https://www.wechall.net/3-levels-on-Bandit.html
 export WECHALLUSER="klemek" && export WECHALLTOKEN="EF7E4-D2145-7A9B6-E3CA7-7A712-03ED4" && wechall
 
