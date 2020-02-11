@@ -1,4 +1,7 @@
 bandit.labs.overthewire.org
+https://www.wechall.net/3-levels-on-Bandit.html
+export WECHALLUSER="klemek" && export WECHALLTOKEN="EF7E4-D2145-7A9B6-E3CA7-7A712-03ED4" && wechall
+
 
 bandit0		bandit0								cat readme
 bandit1		boJ9jbbUNNfktd78OOpsqOltutMc3MY1	cat ./-
@@ -18,9 +21,10 @@ bandit13	8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL	ssh -i sshkey.private bandit14@localho
 bandit14	4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e	cat /etc/bandit_pass/bandit14|nc 127.0.0.1 30000
 bandit15	BfMYroe26WYalil77FoDi9qh59eK5xNr	cat /etc/bandit_pass/bandit15|openssl s_client -connect 127.0.0.1:30001 -quiet
 bandit16	cluFn7wTiGryunymYOu4RcffSxQluehd	nmap localhost -p 31000-32000
-												cat /etc/bandit_pass/bandit16|openssl s_client -connect 127.0.0.1:31790 -quiet|tail -n+2|head -n-1 > /tmp/5646816846
-												chown bandit16:bandit16 /tmp/5646816846 && chmod 600 /tmp/5646816846
-												ssh -i /tmp/5646816846 bandit17@localhost 'cat /etc/bandit_pass/bandit17'
+												TMP=$(mktemp)
+												cat /etc/bandit_pass/bandit16|openssl s_client -connect 127.0.0.1:31790 -quiet|tail -n+2|head -n-1 > $TMP
+												chown bandit16:bandit16 $TMP && chmod 600 $TMP
+												ssh -i $TMP bandit17@localhost 'cat /etc/bandit_pass/bandit17'
 bandit17	xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn	diff passwords.old passwords.new
 bandit18	kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd	ssh bandit18@localhost 'cat readme'
 bandit19	IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x	./bandit20-do cat /etc/bandit_pass/bandit20
@@ -40,13 +44,45 @@ bandit23	jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n	cat /etc/cron.d/cronjob_bandit24
 bandit24	UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ	for i in $(seq -w 0 9999); do echo -e -n "\r$i" && echo $(cat /etc/bandit_pass/bandit24) $i|nc -w1 127.0.0.1 30002|grep ^[^IW]; done
 bandit25	uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG	cat /etc/passwd|grep bandit26
 												cat /usr/bin/showtext
-												"cd /directory_wanted ; bash"
-bandit26		
-bandit27		
-bandit28		
-bandit29		
-bandit30		
-bandit31		
-bandit32		
-bandit33		
-bandit34		
+												(screen with less than 6 lines)
+												ssh -o "StrictHostKeyChecking no" -i bandit26.sshkey bandit26@localhost
+												v
+												:set shell /bin/bash
+												:shell
+												cat /etc/bandit_pass/bandit26
+bandit26	5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z	./bandit27-do cat /etc/bandit_pass/bandit27
+bandit27	3ba3118a22e93127a4ed485be72ef5ea	cd $(mktemp -d)
+												git clone ssh://bandit27-git@localhost/home/bandit27-git/repo && cd repo
+												cat README
+bandit28	0ef186ac70e04ea33b4c1853d2526fa2	cd $(mktemp -d)
+												git clone ssh://bandit28-git@localhost/home/bandit28-git/repo && cd repo
+												cat README
+												git log
+												git show 186a1038cc54d1358d42d468cdc8e3cc28a93fcb							
+bandit29	bbc96594b4e001778eee9975372716b2	cd $(mktemp -d)
+												git clone ssh://bandit29-git@localhost/home/bandit29-git/repo && cd repo
+												cat README.md
+												git log
+												git branch -a
+												git checkout remotes/origin/dev
+												git log
+												git show 33ce2e95d9c5d6fb0a40e5ee9a2926903646b4e3
+bandit30	5b90576bedb2cc04c86a9e924ce42faf	cd $(mktemp -d)
+												git clone ssh://bandit30-git@localhost/home/bandit30-git/repo && cd repo
+												cat README.md
+												git log
+												git branch -a
+												git tag -l
+												git show secret
+bandit31	47e603bb428404d265f59c42920d81e5	cd $(mktemp -d)
+												git clone ssh://bandit31-git@localhost/home/bandit31-git/repo && cd repo
+												cat README.md
+												echo 'May I come in?' > key.txt
+												git add key.txt
+												rm .gitignore
+												git add key.txt
+												git commit -m 'let me in'
+												git push origin master
+bandit32	56a9bf19c63d650ce78e6ec0354ee45e	$0
+												cat /etc/bandit_pass/bandit33
+bandit33	c9c3199ddf4121b10cf581a98d51caee	
